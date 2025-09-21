@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aethyrnox Store - Topup Murah dan Cepat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top App Bar -->
+  <header class="appbar glass">
+    <button class="icon-btn" id="menuBtn" aria-label="Menu">
+      <!-- hamburger -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="logo">Aethyrnox Store</div>
+
+    <button class="icon-btn" id="searchBtn" aria-label="Cari">
+      <!-- search -->
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title"><span class="fire">🔥</span> POPULER</h2>
+
+    <!-- Popular strip -->
+    <div class="popular-grid">
+      <a href="mobilelegends.html" class="game-card large">
+        <div class="thumb"><span>ML</span><i class="play"></i></div>
+        <div class="meta">
+          <h3>Mobile Legends</h3>
+          <p>Moonton</p>
+        </div>
+      </a>
+
+      <a href="#" class="game-card large">
+        <div class="thumb"><span>MC</span><i class="play"></i></div>
+        <div class="meta">
+          <h3>Magic Chess: Go G...</h3>
+          <p>Moonton</p>
+        </div>
+      </a>
+
+      <a href="valorant.html" class="game-card">
+        <div class="thumb"><span>VLR</span><i class="play"></i></div>
+        <div class="meta">
+          <h3>Valorant (INDONES...)</h3>
+          <p>Riot Games</p>
+        </div>
+      </a>
+
+      <a href="freefire.html" class="game-card">
+        <div class="thumb"><span>FF</span><i class="play"></i></div>
+        <div class="meta">
+          <h3>Free Fire (INDONES...)</h3>
+          <p>Garena</p>
+        </div>
+      </a>
+
+      <a href="#" class="game-card">
+        <div class="thumb"><span>GI</span><i class="play"></i></div>
+        <div class="meta">
+          <h3>Genshin Impact</h3>
+          <p>MiHoYo</p>
+        </div>
+      </a>
+
+      <a href="#" class="game-card">
+        <div class="thumb"><span>ZZZ</span><i class="play"></i></div>
+        <div class="meta">
+          <h3>Zenless Zone Zero</h3>
+          <p>MiHoYo</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-target="#tabTopup">
+        <span>Top Up Games</span> <em>🎮</em>
+      </button>
+      <button class="tab" data-target="#tabLogin">
+        <span>Via Login Dan Link</span> <em>🎮</em>
+      </button>
+    </div>
+
+    <!-- Grid cards like the screenshot posters -->
+    <section id="tabTopup" class="tab-panel active">
+      <div class="catalog-grid">
+        <a class="poster">
+          <div class="poster-art yellow"><i class="play"></i><span class="badge">MOBILE LEGEND</span></div>
+          <h4>Mobile Legends</h4>
+        </a>
+        <a class="poster">
+          <div class="poster-art gold"><i class="play"></i><span class="badge">MAGIC CHESS</span></div>
+          <h4>Magic Chess</h4>
+        </a>
+        <a class="poster">
+          <div class="poster-art blue"><i class="play"></i><span class="badge">VALORANT</span></div>
+          <h4>Valorant</h4>
+        </a>
+
+        <a class="poster">
+          <div class="poster-art red"><i class="play"></i><span class="badge">FREE FIRE</span></div>
+          <h4>Free Fire</h4>
+        </a>
+        <a class="poster">
+          <div class="poster-art purple"><i class="play"></i><span class="badge">FREE FIRE MAX</span></div>
+          <h4>Free Fire Max</h4>
+        </a>
+        <a class="poster">
+          <div class="poster-art violet"><i class="play"></i><span class="badge">GENSHIN</span></div>
+          <h4>Genshin Impact</h4>
+        </a>
+
+        <a class="poster">
+          <div class="poster-art cyan"><i class="play"></i><span class="badge">ZENLESS</span></div>
+          <h4>Zenless Zone Zero</h4>
+        </a>
+        <a class="poster">
+          <div class="poster-art teal"><i class="play"></i><span class="badge">PUBG</span></div>
+          <h4>PUBG Mobile</h4>
+        </a>
+        <a class="poster">
+          <div class="poster-art dusk"><i class="play"></i><span class="badge">CODM</span></div>
+          <h4>Call of Duty Mobile</h4>
+        </a>
+      </div>
+    </section>
+
+    <section id="tabLogin" class="tab-panel">
+      <div class="empty">
+        <p>Fitur login via link bakal mendarat segera. Sementara, cek katalog Top Up dulu ya ✨</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Chat -->
+  <button id="chatBtn" class="chat-cta">
+    <span class="dot"></span> Obrolan
+  </button>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav glass">
+    <a class="nav-item active" href="#">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 10l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a class="nav-item" href="#">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 5h18M3 12h18M3 19h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Lacak Pesanan</span>
+    </a>
+    <a class="nav-item" href="#">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 4h4v4H5zM15 4h4v4h-4zM5 14h4v4H5zM15 14h4v4h-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Menu</span>
+    </a>
+  </nav>
+
+  <!-- Drawer -->
+  <aside id="drawer" class="drawer">
+    <div class="drawer-head">
+      <strong>Menu</strong>
+      <button class="icon-btn" id="closeDrawer" aria-label="Tutup">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Top Up</a></li>
+      <li><a href="#">Promo</a></li>
+      <li><a href="#">Bantuan</a></li>
+    </ul>
+  </aside>
+  <div id="scrim" class="scrim"></div>
+
+  <script src="app.js"></script>
+</body>
+    </html>
