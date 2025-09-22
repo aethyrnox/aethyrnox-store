@@ -3,116 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aethyrnox Store - Topup Murah dan Cepat!</title>
+  <title>bahterastore.id — clone</title>
+
+  <!-- Favicon "A" -->
+  <link rel="icon" type="image/svg+xml"
+    href='data:image/svg+xml;utf8,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="%23ffb703"/><stop offset="1" stop-color="%23fb923c"/>
+      </linearGradient></defs>
+      <rect width="64" height="64" rx="14" fill="url(%23g)"/>
+      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+            font-family="Inter, Arial" font-size="44" font-weight="800" fill="%23111">A</text>
+    </svg>' />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Top App Bar -->
-  <header class="appbar glass">
+  <!-- Top App Bar (search nempel di sini) -->
+  <header class="appbar appbar-has-search glass">
     <button class="icon-btn lg-hit" id="menuBtn" aria-label="Menu">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
 
-    <div class="logo">Aethyrnox Store</div>
+    <!-- Logo gambar -->
+    <div class="brand">
+      <img src="assets/logo.png" alt="Logo" class="brand-logo" />
+      <div class="logo">bahterastore.id</div>
+    </div>
 
-    <button class="icon-btn lg-hit" id="searchBtn" aria-label="Cari">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-    </button>
+    <!-- Search field di header -->
+    <div class="search-inline">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="searchInput" type="search" placeholder="Cari game…"/>
+      <button id="clearSearch" class="clear-x" aria-label="Bersihkan">&times;</button>
+    </div>
   </header>
-
-  <!-- SEARCH BAR (baru) -->
-  <div class="search-wrap">
-    <input id="searchInput" type="search" placeholder="Cari game… (cth: mobile, valorant, free fire)" />
-    <button id="clearSearch" class="clear-btn" aria-label="Bersihkan pencarian">&times;</button>
-  </div>
 
   <main class="container">
     <h2 class="section-title"><span class="fire">🔥</span> POPULER</h2>
 
-    <!-- Popular strip -->
-    <div class="popular-grid">
-      <a href="mobilelegends.html" class="game-card large" data-title="mobile legends ml moonton">
-        <div class="thumb"><span> </span><i class="play"></i></div>
+    <!-- Populer: 2 kolom × 3 baris, logo 1:1 -->
+    <div class="popular-grid two-by-three">
+      <!-- 1: Mobile Legends -->
+      <a href="mobilelegends.html" class="game-card" data-title="mobile legends ml moonton">
+        <div class="thumb">
+          <img src="assets/pop-ml-1x1.jpg" alt="MLBB" />
+        </div>
         <div class="meta">
-          <h3>Mobile Legends</h3>
-          <p>Moonton</p>
+          <h3>Mobile Legends</h3><p>Moonton</p>
         </div>
       </a>
 
-      <a href="valorant.html" class="game-card large" data-title="valorant riot games vlr">
-        <div class="thumb"><span> </span><i class="play"></i></div>
-        <div class="meta">
-          <h3>Valorant</h3>
-          <p>Riot Games</p>
-        </div>
-      </a>
-
+      <!-- 2: Free Fire -->
       <a href="freefire.html" class="game-card" data-title="free fire garena ff">
-        <div class="thumb"><span> </span><i class="play"></i></div>
+        <div class="thumb">
+          <img src="assets/pop-ff-1x1.jpg" alt="Free Fire" />
+        </div>
         <div class="meta">
-          <h3>Free Fire</h3>
-          <p>Garena</p>
+          <h3>Free Fire</h3><p>Garena</p>
         </div>
       </a>
 
-      <a href="#" class="game-card" data-title="genshin impact mihoyo gi">
-        <div class="thumb"><span> </span><i class="play"></i></div>
+      <!-- 3: Valorant -->
+      <a href="valorant.html" class="game-card" data-title="valorant riot vlr">
+        <div class="thumb">
+          <img src="assets/pop-vlr-1x1.jpg" alt="Valorant" />
+        </div>
         <div class="meta">
-          <h3>Genshin Impact</h3>
-          <p>MiHoYo</p>
+          <h3>Valorant</h3><p>Riot Games</p>
         </div>
       </a>
 
-      <a href="#" class="game-card" data-title="zenless zone zero zzz mihoyo">
-        <div class="thumb"><span> </span><i class="play"></i></div>
+      <!-- 4: PUBG Mobile -->
+      <a href="#" class="game-card" data-title="pubg mobile pubgm">
+        <div class="thumb">
+          <img src="assets/pop-pubgm-1x1.jpg" alt="PUBG Mobile" />
+        </div>
         <div class="meta">
-          <h3>Zenless Zone Zero</h3>
-          <p>MiHoYo</p>
+          <h3>PUBG Mobile</h3><p>Krafton</p>
+        </div>
+      </a>
+
+      <!-- 5–6: bebas -->
+      <a href="#" class="game-card" data-title="genshin impact gi">
+        <div class="thumb">
+          <img src="assets/pop-gi-1x1.jpg" alt="Genshin" />
+        </div>
+        <div class="meta">
+          <h3>Genshin Impact</h3><p>HoYoverse</p>
+        </div>
+      </a>
+
+      <a href="#" class="game-card" data-title="zenless zone zero zzz">
+        <div class="thumb">
+          <img src="assets/pop-zzz-1x1.jpg" alt="ZZZ" />
+        </div>
+        <div class="meta">
+          <h3>Zenless Zone Zero</h3><p>HoYoverse</p>
         </div>
       </a>
     </div>
 
-    <!-- Katalog langsung (tabs dihapus) -->
+    <!-- Judul + grid 3:4 -->
+    <h2 class="section-title" style="margin-top:18px;">Topup Games </h2><!-- 1 spasi di akhir -->
     <section id="catalog">
       <div class="catalog-grid" id="catalogGrid">
-        <a class="poster" href="mobilelegends.html" data-title="mobile legends ml moonton">
-          <div class="poster-art yellow"><i class="play"></i><span class="badge">MOBILE LEGENDS</span></div>
+        <a class="poster" href="mobilelegends.html" data-title="mobile legends">
+          <img class="poster-art" src="assets/card-ml-3x4.jpg" alt="Mobile Legends" />
           <h4>Mobile Legends</h4>
         </a>
-        <a class="poster" href="valorant.html" data-title="valorant riot games vlr">
-          <div class="poster-art blue"><i class="play"></i><span class="badge">VALORANT</span></div>
+        <a class="poster" href="valorant.html" data-title="valorant">
+          <img class="poster-art" src="assets/card-vlr-3x4.jpg" alt="Valorant" />
           <h4>Valorant</h4>
         </a>
-        <a class="poster" href="freefire.html" data-title="free fire garena ff">
-          <div class="poster-art red"><i class="play"></i><span class="badge">FREE FIRE</span></div>
+        <a class="poster" href="freefire.html" data-title="free fire">
+          <img class="poster-art" src="assets/card-ff-3x4.jpg" alt="Free Fire" />
           <h4>Free Fire</h4>
         </a>
-
-        <!-- contoh item lain -->
-        <a class="poster" href="#" data-title="genshin impact gi">
-          <div class="poster-art violet"><i class="play"></i><span class="badge">GENSHIN IMPACT</span></div>
+        <a class="poster" href="#" data-title="pubg mobile">
+          <img class="poster-art" src="assets/card-pubgm-3x4.jpg" alt="PUBG Mobile" />
+          <h4>PUBG Mobile</h4>
+        </a>
+        <a class="poster" href="#" data-title="genshin impact">
+          <img class="poster-art" src="assets/card-gi-3x4.jpg" alt="Genshin Impact" />
           <h4>Genshin Impact</h4>
         </a>
-        <a class="poster" href="#" data-title="zenless zone zero zzz">
-          <div class="poster-art cyan"><i class="play"></i><span class="badge">ZENLESS ZONE ZERO</span></div>
+        <a class="poster" href="#" data-title="zenless zone zero">
+          <img class="poster-art" src="assets/card-zzz-3x4.jpg" alt="Zenless Zone Zero" />
           <h4>Zenless Zone Zero</h4>
-        </a>
-        <a class="poster" href="#" data-title="pubg mobile pubgm">
-          <div class="poster-art teal"><i class="play"></i><span class="badge">PUBG MOBILE</span></div>
-          <h4>PUBG Mobile</h4>
         </a>
       </div>
     </section>
   </main>
 
-  <!-- Floating Chat -->
+  <!-- Chat ke WA -->
   <a id="chatBtn" class="chat-cta" href="https://wa.me/6281997718002" target="_blank" rel="noopener">
-    <span class="dot"></span> Live Chat
+    <span class="dot"></span> Obrolan
   </a>
 
-  <!-- Bottom Navigation (Topup dihapus, Promo ditambah) -->
+  <!-- Bottom Navigation (Promo ada) -->
+  <nav class="bottom-nav glass">
+    <a class="nav-item active" href="index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 10l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a class="nav-item" href="promo.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M4 7h16M6 17h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Promo</span>
+    </a>
+    <a class="nav-item" href="#">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 4h4v4H5zM15 4h4v4h-4zM5 14h4v4H5zM15 14h4v4h-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Menu</span>
+    </a>
+  </nav>
 
   <!-- Drawer -->
   <aside id="drawer" class="drawer">
@@ -125,7 +171,7 @@
     <ul class="drawer-list">
       <li><a href="index.html">Beranda</a></li>
       <li><a href="promo.html">Promo</a></li>
-      <li><a href="https://wa.me/6281997718002" target="_blank" rel="noopener">Chat Admin</a></li>
+      <li><a href="https://wa.me/6281997718002" target="_blank" rel="noopener">Hubungi Admin</a></li>
       <li><a href="#">Bantuan</a></li>
     </ul>
   </aside>
