@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valorant — Top Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="appbar glass">
+    <a class="icon-btn" href="index.html" aria-label="Kembali">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="logo">Valorant</div>
+    <button class="icon-btn" id="searchBtn" aria-label="Cari">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="detail-hero hero-vlr">
+      <div class="cover"></div>
+      <div class="hero-info">
+        <h1>Valorant (Indonesia)</h1>
+        <p class="sub">Riot Games • PC</p>
+        <div class="pills">
+          <span class="pill">E-Wallet</span><span class="pill">Resmi</span><span class="pill">Instan</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <button class="tab active" data-target="#vlr-topup">Top Up</button>
+      <button class="tab" data-target="#vlr-deskripsi">Deskripsi</button>
+      <button class="tab" data-target="#vlr-faq">FAQ</button>
+    </div>
+
+    <section id="vlr-topup" class="tab-panel active">
+      <form class="order-form" onsubmit="return false">
+        <div class="form-row">
+          <label>Riot ID</label>
+          <input type="text" placeholder="contoh: NamaKamu#ID" required />
+        </div>
+
+        <h3 class="opt-title">Pilih VP</h3>
+        <div class="product-grid">
+          <label class="radio-card">
+            <input type="radio" name="vlr_pkg" value="125 VP" data-price="25000">
+            <span class="r-title">125 VP</span><span class="price">Rp25.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="vlr_pkg" value="420 VP" data-price="75000">
+            <span class="r-title">420 VP</span><span class="price">Rp75.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="vlr_pkg" value="700 VP" data-price="120000">
+            <span class="r-title">700 VP</span><span class="price">Rp120.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="vlr_pkg" value="1375 VP" data-price="225000">
+            <span class="r-title">1375 VP</span><span class="price">Rp225.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="vlr_pkg" value="2400 VP" data-price="380000">
+            <span class="r-title">2400 VP</span><span class="price">Rp380.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="vlr_pkg" value="4000 VP" data-price="600000">
+            <span class="r-title">4000 VP</span><span class="price">Rp600.000</span>
+          </label>
+        </div>
+
+        <button class="buy-btn" data-game="Valorant">Beli Sekarang</button>
+        <p class="hint">Masukkan Riot ID lengkap beserta tag (#).</p>
+      </form>
+    </section>
+
+    <section id="vlr-deskripsi" class="tab-panel">
+      <div class="desc"><p>FPS taktis 5v5 dari Riot. Top up Valorant Points buat battle pass & bundle skin.</p></div>
+    </section>
+
+    <section id="vlr-faq" class="tab-panel">
+      <ul class="faq">
+        <li><strong>Pembayaran apa saja?</strong><br/>QRIS, e-wallet, virtual account, dan lainnya.</li>
+        <li><strong>Refund?</strong><br/>Order yang sudah diproses tidak bisa dibatalkan.</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="bottom-nav glass">
+    <a class="nav-item active" href="index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 10l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a class="nav-item" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 5h18M3 12h18M3 19h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Lacak</span></a>
+    <a class="nav-item" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 4h4v4H5zM15 4h4v4h-4zM5 14h4v4H5zM15 14h4v4h-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Menu</span></a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+            </html>
