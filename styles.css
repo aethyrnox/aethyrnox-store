@@ -249,3 +249,34 @@ body{
 .desc{background:#0f172a; border:1px solid rgba(255,255,255,.06); padding:14px; border-radius:16px}
 .faq{list-style:none; padding:0; margin:0}
 .faq li{background:#0f172a; border:1px solid rgba(255,255,255,.06); padding:12px; border-radius:12px; margin-bottom:10px}
+
+/* —— Search bar —— */
+.search-wrap{
+  position:sticky; top:64px; z-index:45;
+  display:flex; gap:8px; padding:10px 12px; background:linear-gradient(180deg, rgba(13,19,33,.92), rgba(13,19,33,.75));
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+#searchInput{
+  flex:1; height:42px; padding:0 14px; border-radius:12px; border:1px solid rgba(255,255,255,.08);
+  background:#0b1220; color:#e5e7eb; outline:none;
+}
+#searchInput::placeholder{ color:#9ca3af }
+.clear-btn{
+  min-width:42px; height:42px; border:none; border-radius:12px; background:#1e293b; color:#e5e7eb; cursor:pointer;
+}
+
+/* —— Larger hit area on mobile —— */
+.lg-hit{ inline-size:44px; block-size:44px }
+
+/* —— Ensure poster ratio 3:4 stays consistent —— */
+.poster-art{ aspect-ratio: 3 / 4; }
+
+/* —— Drawer tweaks for mobile —— */
+.drawer{ width:min(86%, 360px); }
+.drawer-list a{ padding:16px 14px; }
+
+/* —— Grid responsiveness —— */
+.catalog-grid{ grid-template-columns: repeat(2,minmax(0,1fr)); }
+@media (min-width:480px){ .catalog-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (min-width:768px){ .catalog-grid{ grid-template-columns: repeat(4,minmax(0,1fr)); } }
