@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Legends — Top Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="appbar glass">
+    <a class="icon-btn" href="index.html" aria-label="Kembali">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <div class="logo">Mobile Legends</div>
+    <button class="icon-btn" id="searchBtn" aria-label="Cari">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="detail-hero hero-ml">
+      <div class="cover"></div>
+      <div class="hero-info">
+        <h1>Mobile Legends: Bang Bang</h1>
+        <p class="sub">Moonton • Android, iOS</p>
+        <div class="pills">
+          <span class="pill">Cepat</span>
+          <span class="pill">Official</span>
+          <span class="pill">24/7</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <button class="tab active" data-target="#ml-topup">Top Up</button>
+      <button class="tab" data-target="#ml-deskripsi">Deskripsi</button>
+      <button class="tab" data-target="#ml-faq">FAQ</button>
+    </div>
+
+    <section id="ml-topup" class="tab-panel active">
+      <form class="order-form" onsubmit="return false">
+        <div class="form-row">
+          <label>UID</label>
+          <input type="text" placeholder="contoh: 12345678" required />
+        </div>
+        <div class="form-row">
+          <label>Server</label>
+          <input type="text" placeholder="contoh: 1234" required />
+        </div>
+
+        <h3 class="opt-title">Pilih Nominal</h3>
+        <div class="product-grid">
+          <label class="radio-card">
+            <input type="radio" name="ml_pkg" value="86 Diamonds" data-price="25000">
+            <span class="r-title">86 Diamonds</span>
+            <span class="price">Rp25.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="ml_pkg" value="172 Diamonds" data-price="48000">
+            <span class="r-title">172 Diamonds</span>
+            <span class="price">Rp48.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="ml_pkg" value="257 Diamonds" data-price="72000">
+            <span class="r-title">257 Diamonds</span>
+            <span class="price">Rp72.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="ml_pkg" value="344 Diamonds" data-price="93000">
+            <span class="r-title">344 Diamonds</span>
+            <span class="price">Rp93.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="ml_pkg" value="429 Diamonds" data-price="115000">
+            <span class="r-title">429 Diamonds</span>
+            <span class="price">Rp115.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="ml_pkg" value="Weekly Pass" data-price="27000">
+            <span class="r-title">Weekly Pass</span>
+            <span class="price">Rp27.000</span>
+          </label>
+        </div>
+
+        <button class="buy-btn" data-game="Mobile Legends">Beli Sekarang</button>
+        <p class="hint">Pastikan UID & Server benar. Order otomatis ±1–3 menit.</p>
+      </form>
+    </section>
+
+    <section id="ml-deskripsi" class="tab-panel">
+      <div class="desc">
+        <p>MLBB adalah MOBA 5v5 yang fokus ke team fight cepat. Top up diamond untuk skin, Starlight, dan event.</p>
+      </div>
+    </section>
+
+    <section id="ml-faq" class="tab-panel">
+      <ul class="faq">
+        <li><strong>Berapa lama proses?</strong><br/>Biasanya 1–3 menit setelah pembayaran terkonfirmasi.</li>
+        <li><strong>Kenapa diamond belum masuk?</strong><br/>Cek UID/Server & riwayat pembelian. Kalau masih masalah, klik tombol Obrolan di beranda.</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="bottom-nav glass">
+    <a class="nav-item active" href="index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 10l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a class="nav-item" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 5h18M3 12h18M3 19h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Lacak</span></a>
+    <a class="nav-item" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 4h4v4H5zM15 4h4v4h-4zM5 14h4v4H5zM15 14h4v4h-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Menu</span></a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
