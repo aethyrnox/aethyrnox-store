@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PUBG Mobile — Top Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="appbar glass">
+    <a class="icon-btn lg-hit" href="index.html" aria-label="Kembali">
+      <svg width="22" height="22" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="logo">PUBG Mobile</div>
+    <button class="icon-btn lg-hit" id="searchBtn" aria-label="Cari">
+      <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="detail-hero hero-pubgm">
+      <div class="cover"></div>
+      <div class="hero-info">
+        <h1>PUBG Mobile</h1>
+        <p class="sub">Krafton • Android, iOS</p>
+        <div class="pills"><span class="pill">Instan</span><span class="pill">Resmi</span></div>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <button class="tab active" data-target="#pubgm-topup">Top Up</button>
+      <button class="tab" data-target="#pubgm-desc">Deskripsi</button>
+      <button class="tab" data-target="#pubgm-faq">FAQ</button>
+    </div>
+
+    <section id="pubgm-topup" class="tab-panel active">
+      <form class="order-form" onsubmit="return false">
+        <div class="form-row">
+          <label>Character ID</label>
+          <input type="text" placeholder="contoh: 51123456789" required />
+        </div>
+
+        <h3 class="opt-title">Pilih UC</h3>
+        <div class="product-grid">
+          <label class="radio-card"><input type="radio" name="pubgm_pkg" value="60 UC" data-price="15000"><span class="r-title">60 UC</span><span class="price">Rp15.000</span></label>
+          <label class="radio-card"><input type="radio" name="pubgm_pkg" value="325 UC" data-price="75000"><span class="r-title">325 UC</span><span class="price">Rp75.000</span></label>
+          <label class="radio-card"><input type="radio" name="pubgm_pkg" value="660 UC" data-price="145000"><span class="r-title">660 UC</span><span class="price">Rp145.000</span></label>
+          <label class="radio-card"><input type="radio" name="pubgm_pkg" value="1800 UC" data-price="385000"><span class="r-title">1800 UC</span><span class="price">Rp385.000</span></label>
+          <label class="radio-card"><input type="radio" name="pubgm_pkg" value="3850 UC" data-price="770000"><span class="r-title">3850 UC</span><span class="price">Rp770.000</span></label>
+          <label class="radio-card"><input type="radio" name="pubgm_pkg" value="8100 UC" data-price="1500000"><span class="r-title">8100 UC</span><span class="price">Rp1.500.000</span></label>
+        </div>
+
+        <button class="buy-btn" data-game="PUBG Mobile">Beli Sekarang</button>
+        <p class="hint">Pembayaran via WhatsApp: <b>+6281997718002</b></p>
+      </form>
+    </section>
+
+    <section id="pubgm-desc" class="tab-panel">
+      <div class="desc"><p>Battle royale realistis dengan ragam mode & kolaborasi. UC berguna untuk Royale Pass dan kosmetik eksklusif.</p></div>
+    </section>
+
+    <section id="pubgm-faq" class="tab-panel">
+      <ul class="faq">
+        <li><strong>Character ID di mana?</strong><br/>Buka profil di lobby, ID muncul di bawah nickname.</li>
+        <li><strong>Top up gagal?</strong><br/>Cek ID dan koneksi. Hubungi admin jika butuh bantuan.</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="bottom-nav glass two-items">
+    <a class="nav-item" href="index.html">🏠<span>Beranda</span></a>
+    <a class="nav-item" href="promo.html">🔥<span>Promo</span></a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
