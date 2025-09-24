@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zenless Zone Zero — Top Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Header -->
+  <header class="appbar glass">
+    <a class="icon-btn lg-hit" href="index.html" aria-label="Kembali">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <div class="logo">Zenless Zone Zero</div>
+    <button class="icon-btn lg-hit" id="searchBtn" aria-label="Cari">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <main class="container">
+    <section class="detail-hero hero-zzz">
+      <div class="cover"></div>
+      <div class="hero-info">
+        <h1>Zenless Zone Zero</h1>
+        <p class="sub">HoYoverse • PC, Android, iOS</p>
+        <div class="pills">
+          <span class="pill">Instan</span>
+          <span class="pill">Aman</span>
+          <span class="pill">Resmi</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-target="#zzz-topup">Top Up</button>
+      <button class="tab" data-target="#zzz-desc">Deskripsi</button>
+      <button class="tab" data-target="#zzz-faq">FAQ</button>
+    </div>
+
+    <!-- TOP UP -->
+    <section id="zzz-topup" class="tab-panel active">
+      <form class="order-form" onsubmit="return false">
+        <div class="form-row">
+          <label>UID</label>
+          <input type="text" placeholder="contoh: 800123456" required/>
+        </div>
+
+        <h3 class="opt-title">Pilih Paket</h3>
+        <div class="product-grid">
+          <label class="radio-card">
+            <input type="radio" name="zzz_pkg" value="60 Polychromes" data-price="15000"/>
+            <span class="r-title">60 Polychromes</span><span class="price">Rp15.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="zzz_pkg" value="300 Polychromes" data-price="75000"/>
+            <span class="r-title">300 Polychromes</span><span class="price">Rp75.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="zzz_pkg" value="980 Polychromes" data-price="229000"/>
+            <span class="r-title">980 Polychromes</span><span class="price">Rp229.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="zzz_pkg" value="1980 Polychromes" data-price="459000"/>
+            <span class="r-title">1980 Polychromes</span><span class="price">Rp459.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="zzz_pkg" value="3280 Polychromes" data-price="729000"/>
+            <span class="r-title">3280 Polychromes</span><span class="price">Rp729.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="zzz_pkg" value="6480 Polychromes" data-price="1459000"/>
+            <span class="r-title">6480 Polychromes</span><span class="price">Rp1.459.000</span>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="zzz_pkg" value="Monthly Pass (30 hari)" data-price="69000"/>
+            <span class="r-title">Monthly Pass (30 hari)</span><span class="price">Rp69.000</span>
+          </label>
+        </div>
+
+        <button class="buy-btn" data-game="Zenless Zone Zero">Beli Sekarang</button>
+        <p class="hint">Pembayaran & konfirmasi via WhatsApp: <strong>+6281997718002</strong>.</p>
+      </form>
+    </section>
+
+    <!-- DESKRIPSI -->
+    <section id="zzz-desc" class="tab-panel">
+      <div class="desc">
+        <p>
+          ZZZ adalah action RPG urban dari HoYoverse dengan combat cepat dan switching agen yang fluid.
+          Top up Polychromes buat gacha, battle pass, dan event eksklusif.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="zzz-faq" class="tab-panel">
+      <ul class="faq">
+        <li><strong>Berapa lama proses?</strong><br/>Umumnya 1–3 menit setelah pembayaran terkonfirmasi.</li>
+        <li><strong>Kalau belum masuk?</strong><br/>Cek UID dan bukti bayar, lalu chat admin WA untuk pengecekan.</li>
+        <li><strong>Butuh apa aja untuk top up?</strong><br/>Cukup UID (tanpa password). Pastikan datanya benar ya.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer 2 item -->
+  <nav class="bottom-nav glass two-items">
+    <a class="nav-item" href="index.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M3 10l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <span>Beranda</span>
+    </a>
+    <a class="nav-item" href="promo.html">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <path d="M3 12h18M4 7h16M6 17h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Promo</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+  </html>
