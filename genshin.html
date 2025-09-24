@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genshin Impact — Top Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="appbar glass">
+    <a class="icon-btn lg-hit" href="index.html" aria-label="Kembali">
+      <svg width="22" height="22" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="logo">Genshin Impact</div>
+    <button class="icon-btn lg-hit" id="searchBtn" aria-label="Cari">
+      <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="detail-hero hero-gi">
+      <div class="cover"></div>
+      <div class="hero-info">
+        <h1>Genshin Impact</h1>
+        <p class="sub">HoYoverse • PC, Mobile</p>
+        <div class="pills"><span class="pill">Instan</span><span class="pill">Resmi</span></div>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <button class="tab active" data-target="#gi-topup">Top Up</button>
+      <button class="tab" data-target="#gi-desc">Deskripsi</button>
+      <button class="tab" data-target="#gi-faq">FAQ</button>
+    </div>
+
+    <section id="gi-topup" class="tab-panel active">
+      <form class="order-form" onsubmit="return false">
+        <div class="form-row">
+          <label>UID</label>
+          <input type="text" placeholder="contoh: 800123456" required />
+        </div>
+
+        <h3 class="opt-title">Pilih Paket</h3>
+        <div class="product-grid">
+          <label class="radio-card"><input type="radio" name="gi_pkg" value="Blessing of the Welkin Moon" data-price="75000"><span class="r-title">Welkin Moon (30 hari)</span><span class="price">Rp75.000</span></label>
+          <label class="radio-card"><input type="radio" name="gi_pkg" value="60 Genesis Crystals" data-price="15000"><span class="r-title">60 Genesis Crystals</span><span class="price">Rp15.000</span></label>
+          <label class="radio-card"><input type="radio" name="gi_pkg" value="300+30 Genesis Crystals" data-price="75000"><span class="r-title">300+30 Genesis</span><span class="price">Rp75.000</span></label>
+          <label class="radio-card"><input type="radio" name="gi_pkg" value="980+110 Genesis Crystals" data-price="225000"><span class="r-title">980+110 Genesis</span><span class="price">Rp225.000</span></label>
+          <label class="radio-card"><input type="radio" name="gi_pkg" value="1980+260 Genesis Crystals" data-price="450000"><span class="r-title">1980+260 Genesis</span><span class="price">Rp450.000</span></label>
+        </div>
+
+        <button class="buy-btn" data-game="Genshin Impact">Beli Sekarang</button>
+        <p class="hint">Pembayaran via WhatsApp: <b>+6281997718002</b></p>
+      </form>
+    </section>
+
+    <section id="gi-desc" class="tab-panel">
+      <div class="desc"><p>ARPG open-world dengan sistem elemen seru. Top up untuk Genesis Crystals & Welkin untuk bonus harian.</p></div>
+    </section>
+
+    <section id="gi-faq" class="tab-panel">
+      <ul class="faq">
+        <li><strong>Server?</strong><br/>UID otomatis menunjukkan region (angka awal UID).</li>
+        <li><strong>Welkin aktif kapan?</strong><br/>Biasanya instan setelah transaksi sukses.</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav class="bottom-nav glass two-items">
+    <a class="nav-item" href="index.html">🏠<span>Beranda</span></a>
+    <a class="nav-item" href="promo.html">🔥<span>Promo</span></a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
