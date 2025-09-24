@@ -5,6 +5,41 @@ const WHATSAPP_NUMBER = "6281997718002"; // (+62)81997718002
 const waLink = (text = "") =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
+/* =========================
+   TAB SWITCHER (TopUp/Deskripsi/FAQ)
+========================= */
+(function initTabs(){
+  const tabs = document.querySelectorAll(".tabs .tab");
+  const panels = document.querySelectorAll(".tab-panel");
+  if (!tabs.length || !panels.length) return;
+
+  // Pastikan hanya 1 panel aktif di awal
+  if (!document.querySelector(".tab-panel.active")) {
+    panels.forEach(p => p.classList.remove("active"));
+    panels[0].classList.add("active");
+    tabs[0].classList.add("active");
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      // toggle active
+      tabs.forEach(t => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected","false");
+      });
+      panels.forEach(p => p.classList.remove("active"));
+
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected","true");
+      const target = document.querySelector(tab.dataset.target);
+      if (target){
+        target.classList.add("active");
+        // biar ke-scroll rapi di mobile
+        target.scrollIntoView({behavior:"smooth", block:"start"});
+      }
+    });
+  });
+})();
 /* ==========================================
    DRAWER (menu samping)
 ========================================== */
