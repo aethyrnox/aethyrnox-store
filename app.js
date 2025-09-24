@@ -24,8 +24,7 @@ function closeDrawer(){
 }
 
 /* ==========================================
-   SEARCH (inline di header) — live filter
-   Bekerja untuk .game-card (Populer) & .poster (Catalog)
+   SEARCH (inline di header index) — live filter
 ========================================== */
 const searchInput = document.getElementById("searchInput");
 const clearSearch = document.getElementById("clearSearch");
@@ -44,7 +43,6 @@ if (searchInput){
     });
   };
 
-  // event
   searchInput.addEventListener("input", filter);
   clearSearch?.addEventListener("click", () => {
     searchInput.value = "";
@@ -54,10 +52,32 @@ if (searchInput){
 }
 
 /* ==========================================
+   TABS (Top Up / Deskripsi / FAQ) – FIXED
+   Support banyak grup tabs per halaman
+========================================== */
+document.querySelectorAll(".tabs").forEach(group => {
+  const tabs = group.querySelectorAll(".tab");
+  const root = group.closest("main") || document;
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      // nonaktifkan semua tab di grup ini
+      tabs.forEach(t => t.classList.remove("active"));
+      // nonaktifkan semua panel yang masih 1 konteks halaman
+      root.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+
+      // aktifkan tab & panel target
+      tab.classList.add("active");
+      const target = root.querySelector(tab.dataset.target);
+      if (target) target.classList.add("active");
+    });
+  });
+});
+
+/* ==========================================
    CHAT / CS → WhatsApp
 ========================================== */
 document.getElementById("chatBtn")?.addEventListener("click", (e) => {
-  // kalau chatBtn adalah <a>, biarkan default; kalau button, buka manual
   if (e.currentTarget.tagName.toLowerCase() !== "a") {
     const text = "Halo admin, mau tanya soal top up 🙌";
     window.open(waLink(text), "_blank");
@@ -66,20 +86,17 @@ document.getElementById("chatBtn")?.addEventListener("click", (e) => {
 
 /* ==========================================
    BELI SEKARANG → WhatsApp (halaman detail)
-   - Ambil pilihan paket (radio)
-   - Ambil field akun (UID/Server/Riot ID/Player ID)
-   - Format pesan dan buka WA
 ========================================== */
 document.querySelectorAll(".buy-btn").forEach(btn => {
   btn.addEventListener("click", e => {
     const form = e.target.closest("form");
     const game = e.target.dataset.game || document.querySelector(".logo")?.textContent || "Game";
 
-    // pastikan paket dipilih
+    // paket dipilih?
     const chosen = form.querySelector("input[type=radio]:checked");
     if (!chosen) return alert("Pilih nominal dulu ya 🙏");
 
-    // ambil field
+    // ambil field akun
     const rows = form.querySelectorAll(".form-row");
     const fields = [];
     rows.forEach(r => {
@@ -89,7 +106,7 @@ document.querySelectorAll(".buy-btn").forEach(btn => {
       fields.push([label, val]);
     });
 
-    // validasi field wajib
+    // validasi field
     const anyEmpty = fields.some(([,v]) => v.length === 0);
     if (fields.length && anyEmpty) return alert("Lengkapi data akun dulu ya ✍️");
 
