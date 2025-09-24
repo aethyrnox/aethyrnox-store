@@ -231,3 +231,23 @@ button{font:inherit}
 .hero-pubgm .cover{ background:linear-gradient(135deg,#ffe29f,#ffc107) }
 .hero-gi .cover{ background:linear-gradient(135deg,#c084fc,#8b5cf6) }
 .hero-zzz .cover{ background:linear-gradient(135deg,#5eead4,#0ea5e9) }
+
+/* ===== Tabs (interaktif) ===== */
+.tabs{
+  display:flex; gap:8px; margin:6px 0 12px;
+}
+.tab{
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.25);
+  background:#e5e7eb; color:#0f172a;
+  font-weight:800; cursor:pointer;
+}
+.tab.active{
+  background:linear-gradient(135deg, var(--brand1), var(--brand2));
+  color:#111; border-color:transparent;
+}
+
+/* panel: default hidden */
+.tab-panel{ display:none; }
+.tab-panel.active{ display:block; }
