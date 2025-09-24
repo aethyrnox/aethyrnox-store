@@ -9,12 +9,12 @@
 </head>
 <body>
   <header class="appbar glass">
-    <a class="icon-btn" href="index.html" aria-label="Kembali">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <a class="icon-btn lg-hit" href="index.html" aria-label="Kembali">
+      <svg width="22" height="22" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <div class="logo">Free Fire</div>
-    <button class="icon-btn" id="searchBtn" aria-label="Cari">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <button class="icon-btn lg-hit" id="searchBtn" aria-label="Cari">
+      <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
   </header>
 
@@ -24,15 +24,13 @@
       <div class="hero-info">
         <h1>Free Fire</h1>
         <p class="sub">Garena • Android, iOS</p>
-        <div class="pills">
-          <span class="pill">Terpercaya</span><span class="pill">Aman</span><span class="pill">Instan</span>
-        </div>
+        <div class="pills"><span class="pill">Terpercaya</span><span class="pill">Aman</span></div>
       </div>
     </section>
 
     <div class="tabs">
       <button class="tab active" data-target="#ff-topup">Top Up</button>
-      <button class="tab" data-target="#ff-deskripsi">Deskripsi</button>
+      <button class="tab" data-target="#ff-desc">Deskripsi</button>
       <button class="tab" data-target="#ff-faq">FAQ</button>
     </div>
 
@@ -45,56 +43,34 @@
 
         <h3 class="opt-title">Pilih Diamonds</h3>
         <div class="product-grid">
-          <label class="radio-card">
-            <input type="radio" name="ff_pkg" value="70 Diamonds" data-price="12000">
-            <span class="r-title">70 Diamonds</span><span class="price">Rp12.000</span>
-          </label>
-          <label class="radio-card">
-            <input type="radio" name="ff_pkg" value="140 Diamonds" data-price="23000">
-            <span class="r-title">140 Diamonds</span><span class="price">Rp23.000</span>
-          </label>
-          <label class="radio-card">
-            <input type="radio" name="ff_pkg" value="355 Diamonds" data-price="56000">
-            <span class="r-title">355 Diamonds</span><span class="price">Rp56.000</span>
-          </label>
-          <label class="radio-card">
-            <input type="radio" name="ff_pkg" value="720 Diamonds" data-price="113000">
-            <span class="r-title">720 Diamonds</span><span class="price">Rp113.000</span>
-          </label>
-          <label class="radio-card">
-            <input type="radio" name="ff_pkg" value="1450 Diamonds" data-price="220000">
-            <span class="r-title">1450 Diamonds</span><span class="price">Rp220.000</span>
-          </label>
-          <label class="radio-card">
-            <input type="radio" name="ff_pkg" value="Member Mingguan" data-price="27000">
-            <span class="r-title">Member Mingguan</span><span class="price">Rp27.000</span>
-          </label>
+          <label class="radio-card"><input type="radio" name="ff_pkg" value="70 Diamonds" data-price="12000"><span class="r-title">70 Diamonds</span><span class="price">Rp12.000</span></label>
+          <label class="radio-card"><input type="radio" name="ff_pkg" value="140 Diamonds" data-price="23000"><span class="r-title">140 Diamonds</span><span class="price">Rp23.000</span></label>
+          <label class="radio-card"><input type="radio" name="ff_pkg" value="355 Diamonds" data-price="56000"><span class="r-title">355 Diamonds</span><span class="price">Rp56.000</span></label>
+          <label class="radio-card"><input type="radio" name="ff_pkg" value="720 Diamonds" data-price="113000"><span class="r-title">720 Diamonds</span><span class="price">Rp113.000</span></label>
+          <label class="radio-card"><input type="radio" name="ff_pkg" value="1450 Diamonds" data-price="220000"><span class="r-title">1450 Diamonds</span><span class="price">Rp220.000</span></label>
+          <label class="radio-card"><input type="radio" name="ff_pkg" value="Member Mingguan" data-price="27000"><span class="r-title">Member Mingguan</span><span class="price">Rp27.000</span></label>
         </div>
 
         <button class="buy-btn" data-game="Free Fire">Beli Sekarang</button>
-        <p class="hint">Cek kembali Player ID sebelum bayar ya.</p>
+        <p class="hint">Pembayaran via WhatsApp: <b>+6281997718002</b></p>
       </form>
     </section>
 
-    <section id="ff-deskripsi" class="tab-panel">
-      <div class="desc"><p>Battle royale cepat dengan event rutin. Isi Diamonds untuk bundle, elite pass, dan gacha.</p></div>
+    <section id="ff-desc" class="tab-panel">
+      <div class="desc"><p>Battle royale cepat dengan rotasi event tiada henti. Diamonds dipakai untuk bundle, elite pass, dan gacha.</p></div>
     </section>
 
     <section id="ff-faq" class="tab-panel">
       <ul class="faq">
-        <li><strong>Metode pembayaran?</strong><br/>QRIS, e-wallet, VA bank, dan lainnya.</li>
-        <li><strong>Kesalahan ID?</strong><br/>Order salah ID menjadi tanggung jawab pembeli. Pastikan data benar.</li>
+        <li><strong>Salah ID?</strong><br/>Order salah ID jadi tanggung jawab pembeli. Pastikan data benar.</li>
+        <li><strong>Metode bayar?</strong><br/>Lewat WhatsApp admin: QRIS/e-wallet/VA (tanya ketersediaan).</li>
       </ul>
     </section>
   </main>
 
-  <nav class="bottom-nav glass">
-    <a class="nav-item active" href="index.html">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 10l9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-      <span>Beranda</span>
-    </a>
-    <a class="nav-item" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 5h18M3 12h18M3 19h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Lacak</span></a>
-    <a class="nav-item" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 4h4v4H5zM15 4h4v4h-4zM5 14h4v4H5zM15 14h4v4h-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span>Menu</span></a>
+  <nav class="bottom-nav glass two-items">
+    <a class="nav-item" href="index.html">🏠<span>Beranda</span></a>
+    <a class="nav-item" href="promo.html">🔥<span>Promo</span></a>
   </nav>
 
   <script src="app.js"></script>
